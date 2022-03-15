@@ -22,6 +22,8 @@ import BookmarkIcon from "@mui/icons-material/Bookmark";
 import ShareIcon from "@mui/icons-material/Share";
 import DragHandleIcon from "@mui/icons-material/DragHandle";
 import SearchIcon from "@mui/icons-material/Search";
+import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
+import ElectricCarIcon from "@mui/icons-material/ElectricCar";
 
 const navData = ["Product", "Pricing", "Contact", "Features"];
 
@@ -50,28 +52,28 @@ export default function GraphicLanding() {
           <Button variant="contained">Sign In</Button>
         </Toolbar>
       </AppBar>
+
       <Toolbar />
+
       <Box sx={{ background: "#1D1D1D" }}>
         <Container component="main" maxWidth="md">
+
           <Typography color={"white"} align="center" pt={8} variant="h2">
             Graphic novels,at your fingertips.
           </Typography>
+          
           <Typography
             color={(theme) => theme.palette.primary.second}
             align="center"
             pt={4}
           >
             Our cloud-based graphic novel database will enable you to find the
-            most exotic
+            most exotic <br /> graphic novels at an affordable package. Relive
+            your nostalgias! Stay inspired!
           </Typography>
-          <Typography
-            color={(theme) => theme.palette.primary.second}
-            align="center"
-          >
-            graphic novels at an affordable package. Relive your nostalgias!
-            Stay inspired!
-          </Typography>
+
           <Container align="center" sx={{ mt: 4 }}>
+
             <Button variant="contained" sx={{ mx: 2 }}>
               Get Started
             </Button>
@@ -82,11 +84,15 @@ export default function GraphicLanding() {
             >
               See how it works
             </Button>
+
           </Container>
+
         </Container>
 
         <Container component="main">
-          <Grid container maxWidth="md" mt={5}>
+
+          <Grid container maxWidth="md" py={5}>
+
             <Grid item md={6}>
               <Typography variant="h4" color={"white"} mt={5}>
                 1200+
@@ -115,6 +121,7 @@ export default function GraphicLanding() {
                 <br /> grandad would enjoy.
               </Typography>
             </Grid>
+
             <Grid
               item
               md={6}
@@ -155,7 +162,7 @@ export default function GraphicLanding() {
               <Card
                 sx={{
                   width: "250px",
-                  height: "380px",
+                  height: "390px",
                   background: (theme) => theme.palette.secondary.second,
                 }}
               >
@@ -183,25 +190,29 @@ export default function GraphicLanding() {
                     variant="standard"
                     label="Search for graphic novels"
                     InputLabelProps={{
-                      sx: {color: 'inherit'}
+                      sx: { color: "inherit" },
                     }}
                     InputProps={{
                       startAdornment: (
-                        <InputAdornment position="start" sx={{color: 'inherit'}}>
+                        <InputAdornment
+                          position="start"
+                          sx={{ color: "inherit" }}
+                        >
                           <SearchIcon />
                         </InputAdornment>
                       ),
                       sx: {
-                        color: 'inherit',
+                        color: "inherit",
 
-                        '&::before, &::after': {
-                          borderColor: (theme) => theme.palette.primary.contrastText + ' !important' 
-                        }
-                      }
+                        "&::before, &::after": {
+                          borderColor: (theme) =>
+                            theme.palette.primary.contrastText + " !important",
+                        },
+                      },
                     }}
                     sx={{
-                      mt: 2, 
-                      color: 'primary.contrastText'
+                      mt: 2,
+                      color: "primary.contrastText",
                     }}
                   />
                   <Typography
@@ -212,20 +223,51 @@ export default function GraphicLanding() {
                   >
                     Favourite Genres
                   </Typography>
-                  <Container
-                    sx={{ display: "flex", }}
-                  >
-                    <Paper sx={{ width: "70px", height: "90px" , mx: 2 }}>
-                      <Typography>Hi</Typography>
+                  <Box sx={{ display: "flex", pt: 2 }}>
+                    <Paper
+                      elevation={12}
+                      sx={{
+                        width: "80px",
+                        height: "90px",
+                        mx: 2,
+                        background: "#2a2a2b",
+                        textAlign: "center",
+                        color: (theme) => theme.palette.primary.second,
+                      }}
+                    >
+                      <SportsSoccerIcon />
+                      <Typography color="white" variant="subtitle2">
+                        Sports
+                      </Typography>
+                      <Typography color="white" variant="caption">
+                        35
+                      </Typography>
                     </Paper>
-                    <Paper sx={{ width: "70px", height: "90px" }}>
-                      <Typography>Hi</Typography>
+                    <Paper
+                      elevation={12}
+                      sx={{
+                        width: "80px",
+                        height: "90px",
+                        background: "#2a2a2b",
+                        textAlign: "center",
+                        color: (theme) => theme.palette.primary.second,
+                      }}
+                    >
+                      <ElectricCarIcon />
+                      <Typography color="white" variant="subtitle2">
+                        Racing
+                      </Typography>
+                      <Typography color="white" variant="caption">
+                        12
+                      </Typography>
                     </Paper>
-                  </Container>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>
+
           </Grid>
+
         </Container>
       </Box>
     </>
